@@ -1,0 +1,39 @@
+@import "variables";
+
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 1em;
+  padding-top: 0;
+  box-sizing: border-box;
+}
+
+.flex-sized {
+  flex: 1;
+  height: 100%;
+  display: flex;
+  align-items: stretch;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-right: 0.55em;
+}
+
+@media only screen and (max-width: $breakpoint) {
+  .App {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .flex-sized {
+    flex-basis: 100%;
+    height: auto;
+    margin-right: 0;
+  }
+}
+
+.selectCecoContainer {
+  height: 13em;
+  overflow: auto;
+}

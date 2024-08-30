@@ -1,0 +1,26 @@
+@import "variables";
+
+body {
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: $verde;
+  background-image: linear-gradient($verde, $verde-luz);
+  background-attachment: fixed;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-weight: bold;
+  }
+
+  main {
+    margin: 0;
+    height: 100%;
+    min-height: calc(100vh);
+  }
+}

@@ -1,0 +1,145 @@
+@import "variables.scss";
+
+$text-fade-out-duration: 0.3s;
+$arrow-animation-delay: 0;
+$arrow-animation-duration: 1.5s;
+$check-animation-duration: 1s;
+$check-animation-delay: 0.1s;
+$button-background-change-duration: 0.2s;
+$button-background-change-delay: calc(
+  #{$arrow-animation-duration} - #{$button-background-change-duration} - 0.1s
+);
+$total-animation-duration: $arrow-animation-duration;
+
+@keyframes check-fade {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  30%,
+  70% {
+    opacity: 1;
+  }
+}
+
+@keyframes button-text-fade {
+  0%,
+  80% {
+    opacity: 1;
+  }
+  3%,
+  60% {
+    opacity: 0;
+  }
+}
+
+@keyframes arrow-move {
+  4% {
+    transform: translateX(2em);
+  }
+  40% {
+    transform: translateX(2em);
+    opacity: 0;
+  }
+  60% {
+    transform: translateX(-0.09em);
+    opacity: 0;
+  }
+  65% {
+    opacity: 1;
+  }
+}
+
+@keyframes button {
+  0%,
+  80% {
+    font-size: 1em;
+    background-color: $verde-call-to-action;
+  }
+  1% {
+    font-size: 1.07em;
+  }
+
+  10% {
+    font-size: 1em;
+  }
+  100% {
+    background-color: $verde-desabilitado;
+  }
+}
+
+.confetti {
+  position: absolute;
+  pointer-events: none;
+  bottom: -1.5em;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.botonCarga {
+  display: flex;
+  position: relative;
+  align-items: center;
+  width: 13.1em;
+  height: 2.5em;
+
+  .boton {
+    font-size: 1em;
+    padding: 0.5rem;
+    width: 13em;
+    overflow: hidden;
+    height: 2.4em;
+    position: relative;
+    color: white;
+    font-weight: 800;
+    border-radius: 0.2em;
+    background-color: $verde-desabilitado;
+    border: $verde-desabilitado;
+    cursor: pointer;
+    outline: none;
+
+    &:focus {
+      @include inputFocusSyle;
+    }
+
+    span {
+      margin-right: 0.5em;
+    }
+
+    .ok-boton-de-carga {
+      position: absolute;
+      left: 50%;
+      opacity: 0;
+    }
+  }
+
+  .boton.ready {
+    border: $verde-call-to-action;
+    background-color: $verde-call-to-action;
+  }
+
+  .boton.disabled {
+    pointer-events: none;
+  }
+
+  .boton.clickedAnimation {
+    animation: button 1s;
+
+    span {
+      animation-name: button-text-fade;
+      animation-duration: $arrow-animation-duration;
+    }
+
+    .flecha-boton-de-carga {
+      animation-name: arrow-move;
+      animation-duration: $arrow-animation-duration;
+      animation-delay: $arrow-animation-delay;
+    }
+
+    .ok-boton-de-carga {
+      animation-name: check-fade;
+      animation-duration: $check-animation-duration;
+      animation-delay: $check-animation-delay;
+    }
+  }
+}

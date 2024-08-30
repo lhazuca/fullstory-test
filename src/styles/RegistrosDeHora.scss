@@ -1,0 +1,102 @@
+@import "variables";
+
+.RegistrosDeHora {
+  flex: 1;
+  width: 100%;
+  background-color: white;
+  border-radius: 6px;
+  height: 100%;
+  margin-left: 0.55em;
+  padding-bottom: 0.2em;
+
+  .react-tabs__tab-panel {
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+
+  .header {
+    @include titulo-con-borde;
+
+    justify-content: center;
+    width: 100%;
+
+    .mes-y-año {
+      padding: 0 10px;
+      font-weight: $semibold;
+      min-width: 163px; // El ancho del mes más largo - para que los botones no se muevan de lugar a medida que uno los aprieta
+      text-align: center;
+    }
+
+    .boton-cambio-fecha {
+      font-size: 1.4em;
+      color: $verde-call-to-action;
+      cursor: pointer;
+
+      &.oculto {
+        visibility: hidden;
+      }
+    }
+  }
+
+  .TabList {
+    display: flex;
+    border-radius: 6px;
+
+    padding: 0;
+    margin: 0;
+    background-color: $feriado;
+
+    height: 2em;
+
+    font-size: 20px;
+    font-weight: $semibold;
+
+    .Tab {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-top-left-radius: 6px;
+      border-top-right-radius: 6px;
+
+      width: 50%;
+      opacity: 0.5;
+
+      svg {
+        @media screen and (min-width: 600px) {
+          margin-right: 0.5rem;
+        }
+      }
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      .title {
+        @media screen and (max-width: 600px) {
+          display: none;
+        }
+      }
+    }
+
+    .react-tabs__tab--selected {
+      background-color: white;
+      opacity: 1;
+    }
+  }
+}
+
+@media only screen and (max-width: $breakpoint) {
+  .RegistrosDeHora {
+    width: 100%;
+    margin: 1rem 0 0;
+
+    .dia {
+      width: 100%;
+    }
+  }
+}
+
+.cargando {
+  opacity: 0.5;
+  pointer-events: none;
+}

@@ -1,0 +1,56 @@
+@import "variables.scss";
+
+.contenedor-login {
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+
+  .login {
+    max-width: 30rem;
+    padding: 2rem;
+    background-color: white;
+    border-radius: 6px;
+    margin: 2rem;
+
+    h1 {
+      font-size: 2.5rem;
+    }
+
+    .boton {
+      min-width: 5rem;
+      height: 2.5rem;
+      border-radius: 6px;
+      background-color: $gris-95;
+      border-color: $gris-95;
+      margin-top: 1rem;
+      margin-left: auto;
+      padding: 0 1rem;
+      cursor: not-allowed;
+      opacity: 0.5;
+    }
+
+    .habilitado {
+      color: white;
+      opacity: 1;
+      background-color: $resaltado;
+      border: $resaltado 2px solid;
+      cursor: pointer;
+    }
+  }
+}
+
+@media only screen and (max-width: $breakpoint) {
+  .contenedor-login {
+    display: block;
+
+    .login {
+      padding: 1rem;
+      margin: 1.5rem 0.75rem 0.75rem;
+
+      h1 {
+        font-size: 24px;
+        margin-bottom: 2rem;
+      }
+    }
+  }
+}

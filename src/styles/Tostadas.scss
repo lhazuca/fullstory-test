@@ -1,0 +1,29 @@
+@import "variables";
+
+.Toastify__toast-container {
+  font-size: 1.5em;
+  border-radius: 6px;
+  font-family: "Nunito", sans-serif;
+}
+
+.Toastify__toast {
+  border-radius: 6px;
+}
+
+.Toastify__close-button {
+  width: 2em;
+  height: 2em;
+
+  svg {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.Toastify__toast--success {
+  background-color: $fondo;
+}
+
+.Toastify__toast-body {
+  padding: 1rem 0.5rem;
+}

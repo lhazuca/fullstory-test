@@ -1,0 +1,83 @@
+@import "variables.scss";
+
+.Metricas {
+  padding: 0.5rem 1.5rem;
+  font-size: 13px;
+  max-height: 77.7vh;
+
+  h2 {
+    font-size: 20px;
+    font-weight: $semibold;
+    margin-bottom: 0.5rem;
+  }
+
+  .titulo {
+    display: flex;
+    align-items: baseline;
+
+    h2 {
+      margin-right: 1rem;
+    }
+
+    span {
+      opacity: 0.5;
+    }
+  }
+
+  .promedios {
+    display: flex;
+    padding-bottom: 2rem;
+
+    ul {
+      margin: 0 1rem 0 0;
+    }
+
+    h3 {
+      margin: 0;
+    }
+  }
+
+  .metricas {
+    display: flex;
+    gap: 3rem;
+
+    .metrica {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 1rem;
+
+      h1 {
+        margin-top: 0;
+        margin-bottom: 0;
+        color: $verde-oscuro;
+      }
+
+      .subtitulo {
+        color: $resaltado;
+      }
+
+      .notas {
+        color: $gris-comun;
+      }
+    }
+
+    .porcentaje {
+      display: flex;
+      gap: 0.5rem;
+      align-items: center;
+
+      h1 {
+        color: $verde-facturable;
+      }
+
+      .dona {
+        height: 3rem;
+        width: 3rem;
+      }
+    }
+  }
+
+  .recharts-default-tooltip {
+    border-radius: 6px;
+  }
+}

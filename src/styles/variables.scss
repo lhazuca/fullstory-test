@@ -1,0 +1,50 @@
+$verde-luz: #98db00;
+$verde-agua: #dcf4d4;
+$azul-facturable: #d9f2f8;
+$verde-desabilitado: #84b885;
+$verde-call-to-action: #00bc34;
+$verde: #62b246;
+$verde-oscuro: rgba(98, 178, 70, 1);
+$verde-facturable: #566b5c;
+$edit-border: #4200ff;
+
+$gris-comun: grey;
+$gris: hsl(0, 0%, 80%);
+$gris-95: hsl(0, 0%, 95%);
+$gris-98: hsl(0, 0%, 98%);
+$keyboard-action: #766df4;
+$feriado: #efefef;
+
+$fondo: #352b26;
+
+$resaltado: #6d6058;
+
+$breakpoint: 880px;
+$header-height: 3.9em;
+
+// Pesos tipografías
+$semibold: 600;
+
+@mixin inputFocusSyle {
+  border: $verde 2px solid;
+  box-shadow: 0 0 6px rgba(98, 178, 70, 0.5);
+}
+
+@mixin panelContainer {
+  background-color: white;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+
+@mixin titulo-con-borde {
+  font-size: 20px;
+  height: 2.2em;
+  border-bottom: 1px solid $gris;
+  display: flex;
+  align-items: center;
+
+  h1 {
+    font-size: 1em;
+    margin-left: 0.8em;
+  }
+}

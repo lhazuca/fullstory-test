@@ -1,0 +1,21 @@
+@import "variables";
+@import "HorasDelMes";
+
+.TooltipRegistros {
+  @extend .HorasDelMes;
+
+  background-color: white;
+  opacity: 0.9;
+
+  border-radius: 6px;
+  box-shadow: 0 2px 10px $fondo;
+  backdrop-filter: blur(10px);
+
+  .dia {
+    border: 0;
+  }
+
+  svg {
+    display: none;
+  }
+}
